@@ -874,6 +874,15 @@ section.active{
     .contact-box .field-box {
         grid-template-columns: 1fr;
     }
+
+    .tv-frame {
+        width: 500px; /* Ancho del televisor */
+        height: 500px; /* Alto del televisor */
+    }
+
+    .slider-container {
+        top: 97px; 
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -900,8 +909,17 @@ section.active{
         gap: 3rem;
     }
 
-    .tv-detail img{
+    /* .tv-detail img{
         width: 45rem;
+    } */
+
+    .tv-frame {
+        width: 600px; /* Ancho del televisor */
+        height: 600px; /* Alto del televisor */
+    }
+
+    .slider-container {
+        top: 116px; 
     }
 
     .sucursales-container .sucursales-box:first-child {
