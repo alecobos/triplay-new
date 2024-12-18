@@ -12,6 +12,12 @@ menuIcon.addEventListener("click", () => {
 const activePage = () => {
   const header = document.querySelector("header");
   const barsBox = document.querySelector(".bars-box");
+  const whatsapp = document.querySelector(".whatsapp");
+
+  whatsapp.classList.remove("active");
+  setTimeout(() => {
+    whatsapp.classList.add("active");
+  }, 1100);
 
   header.classList.remove("active");
   setTimeout(() => {
@@ -34,21 +40,6 @@ const activePage = () => {
   menuIcon.classList.remove("bx-x");
   navbar.classList.remove("active");
 };
-
-// navLinks.forEach((link, idx) => {
-//     link.addEventListener('click', () => {
-//         if (!link.classList.contains('active')) {
-//             activePage();
-//             console.log(idx)
-
-//             link.classList.add('active')
-
-//             setTimeout(() => {
-//                 sections[idx].classList.add('active');
-//             }, 1100);
-//         }
-//     })
-// })
 
 navLinks.forEach((link, idx) => {
   link.addEventListener("click", () => {

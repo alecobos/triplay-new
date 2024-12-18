@@ -140,6 +140,25 @@ section.active{
     }
 }
 
+article {
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+}
+
+article.active{
+    animation: show-whatsapp 1.5s linear forwards;
+    animation-delay: 1.6s;
+}
+
+@keyframes show-whatsapp {
+    100% {
+        visibility: visible;
+        opacity: 1;
+        overflow: auto;
+    }
+}
+
 .home{
     display: flex;
     align-items: center;
@@ -791,6 +810,8 @@ section.active{
     right: 10px;
     z-index: 1;
     font-size: 5.5rem;
+    visibility: hidden;
+    opacity: 0;
   }
   @media screen and (min-width: 768px) {
     .whatsapp {
@@ -812,6 +833,17 @@ section.active{
     }
   }
   
+  .whatsapp.active {
+    animation: show-whatsapp 1.5s linear forwards;
+    animation-delay: 1.2s;
+  }
+
+  @keyframes show-whatsapp {
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+  }
   
   .whatsapp a i {
     color: var(--strong-color);
