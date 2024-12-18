@@ -46,7 +46,7 @@ navLinks.forEach((link, idx) => {
     if (idx < 5) {
       if (!link.classList.contains("active")) {
         activePage();
-        console.log(idx);
+        //console.log(idx);
 
         link.classList.add("active");
 
