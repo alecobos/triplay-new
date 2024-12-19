@@ -847,6 +847,22 @@ article.active{
     animation-delay: 1.2s;
   }
 
+
+
+  .footer {
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: var(--white-color);
+    /* background-color: #f8f9fa; */
+}
+
+    .footer p {
+        margin: 0;
+    }
+
   @keyframes show-whatsapp {
     100% {
         visibility: visible;
