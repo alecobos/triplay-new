@@ -441,6 +441,12 @@ article.active{
     gap: 5rem;
 }
 
+.tv-box:nth-child(2) { /* Selecciona la segunda caja (donde está el TV) */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Opcional: centra verticalmente si hay altura suficiente */
+}
+
 .tv-box h2 {
     font-size: 4.5rem;
 }
@@ -489,6 +495,8 @@ article.active{
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    margin: 0 auto; /* Centra horizontalmente */
+    display: block; /* Asegúrate de que no sea inline */
   }
 
 /* Contenedor del slider (dentro del TV) */
@@ -498,6 +506,7 @@ article.active{
     overflow: hidden;
     position: absolute;
     top: 116px; 
+    left: 4.5px;
   }
   
   /* Slider */
@@ -874,6 +883,21 @@ article.active{
     section {
         padding: 10rem 4% 2rem;
     }
+
+    .tv-frame {
+        width: 550px; /* Ancho del televisor */
+        height: 550px; /* Alto del televisor */
+    }
+
+    .slider-container {
+        top: 106px; 
+    }
+
+    .tv-container, 
+    .heading,
+    .contact-box {
+        margin-top: 2rem;
+    }
 }
 
 @media screen and (max-width: 810px) {
@@ -941,17 +965,14 @@ article.active{
         gap: 3rem;
     }
 
-    /* .tv-detail img{
-        width: 45rem;
-    } */
 
     .tv-frame {
-        width: 600px; /* Ancho del televisor */
-        height: 600px; /* Alto del televisor */
+        width: 550px; /* Ancho del televisor */
+        height: 550px; /* Alto del televisor */
     }
 
     .slider-container {
-        top: 116px; 
+        top: 106px; 
     }
 
     .sucursales-container .sucursales-box:first-child {
@@ -974,6 +995,16 @@ article.active{
     .contact-box .field-box {
         grid-template-columns: 1fr;
     }
+
+    
+    .tv-frame {
+        width: 410px; /* Ancho del televisor */
+        height: 410px; /* Alto del televisor */
+    }
+
+    .slider-container {
+        top: 80px; 
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -981,13 +1012,20 @@ article.active{
         font-size: 50%;
     }
 
-    .tv-detail img{
-        width: 40rem;
-    }
-
     .tv-container, 
     .heading,
     .contact-box {
         margin-top: 2rem;
     }
+
+    .tv-frame {
+        width: 300px; /* Ancho del televisor */
+        height: 300px; /* Alto del televisor */
+    }
+
+    .slider-container {
+        top: 58px; 
+        left: 2px;
+    }
+
 }
