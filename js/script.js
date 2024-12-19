@@ -177,17 +177,17 @@ document
   });
 
 const slider = document.querySelector(".slider");
-const images = document.querySelectorAll(".slider img");
+const imagesCanal = document.querySelectorAll(".slider .canal");
 const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");
 
 let indice = 0;
 
 function showSlide(newIndex) {
-    indice = newIndex;
+  indice = newIndex;
   if (indice < 0) {
-    indice = images.length - 1;
-  } else if (indice >= images.length) {
+    indice = imagesCanal.length - 1;
+  } else if (indice >= imagesCanal.length) {
     indice = 0;
   }
   const offset = -indice * 100; // 100% del ancho del contenedor
@@ -200,4 +200,59 @@ prevButton.addEventListener("click", () => {
 
 nextButton.addEventListener("click", () => {
   showSlide(indice + 1);
+});
+
+const sliderFut = document.querySelector(".slider.futbol");
+const imagesFutbol = document.querySelectorAll(".slider .futbol");
+const prevFutButton = document.querySelector(".prev.futbol");
+const nextFutButton = document.querySelector(".next.futbol");
+
+let indiceFut = 0;
+
+function showSlideFut(newIndex) {
+  indiceFut = newIndex;
+if (indiceFut < 0) {
+  indiceFut = imagesFutbol.length - 1;
+} else if (indiceFut >= imagesFutbol.length) {
+  indiceFut = 0;
+}
+const offset = -indiceFut * 100; // 100% del ancho del contenedor
+sliderFut.style.transform = `translateX(${offset}%)`;
+}
+
+
+prevFutButton.addEventListener("click", () => {
+  showSlideFut(indiceFut - 1);
+});
+
+nextFutButton.addEventListener("click", () => {
+  showSlideFut(indiceFut + 1);
+});
+
+
+const sliderHbo = document.querySelector(".slider.hbo");
+const imagesHbo = document.querySelectorAll(".slider .hbo");
+const prevHboButton = document.querySelector(".prev.hbo");
+const nextHboButton = document.querySelector(".next.hbo");
+
+let indiceHbo = 0;
+
+function showSlideHbo(newIndex) {
+  indiceHbo = newIndex;
+if (indiceHbo < 0) {
+  indiceHbo = imagesHbo.length - 1;
+} else if (indiceHbo >= imagesHbo.length) {
+  indiceHbo = 0;
+}
+const offset = -indiceHbo * 100; // 100% del ancho del contenedor
+sliderHbo.style.transform = `translateX(${offset}%)`;
+}
+
+
+prevHboButton.addEventListener("click", () => {
+  showSlideHbo(indiceHbo - 1);
+});
+
+nextHboButton.addEventListener("click", () => {
+  showSlideHbo(indiceHbo + 1);
 });
